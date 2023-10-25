@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Daten Anzeigen</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Gespeicherte Daten</h2>
+
+<table>
+    <tr>
+        <th>Datum</th>
+        <th>Menge</th>
+        <th>Km-Stand</th>
+        <th>Preis</th>
+    </tr>
+    <!-- Daten aus der Flask-App dynamisch einfüllen -->
+    {% for eintrag in eintraege %}
+    <tr>
+        <td>{{ eintrag.datum }}</td>
+        <td>{{ eintrag.menge }}</td>
+        <td>{{ eintrag.kmstand }}</td>
+        <td>{{ eintrag.preis }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
