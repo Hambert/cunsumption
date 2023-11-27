@@ -1,2 +1,3 @@
-# Consumption collection
-Simple webapp to collect energy consumptions
+# Consumption data collector
+
+Mini webapp in Python to collect and different energy cunsumption. Water, electricity and gasoline.
